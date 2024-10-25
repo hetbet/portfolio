@@ -1,0 +1,75 @@
+/* Import fonts - Noto Sans + Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+/* Root */
+:root {
+    --bg-colour: #232527;
+    --fnt-colour: #fff;
+    --header-font: Oswald;
+    --normal-font: Noto Sans;
+}
+
+/* Body */
+body {
+    margin: 0;
+    font-family: var(--normal-font);
+    background: var(--bg-colour);
+    color: var(--fnt-colour);
+    scroll-behavior: smooth;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: var(--header-font);
+}
+
+/* Sections */
+section {
+    width: 100vw;
+}
+
+a:has(h3) {
+    transition-duration: 2s;
+    color: var(--fnt-colour);
+    text-decoration: none;
+}
+
+nav:hover a {
+    transition-duration: 1s;
+    color: rgb(133, 133, 133);
+}
+nav a:hover {
+    color: var(--fnt-colour);
+    font-size: 1.05em;
+}
+
+a.icon {
+    color: white;
+    font-size: 2em;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+}
+
+/* Smaller screens */
+@media screen and (max-width: 1000px) {
+    /* Hide nav bar, add burger menu */
+    nav {
+        display: none;
+    }
+
+
+}
+
+/* Wide Screen */
+@media screen and (min-width: 1000px) {
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    a.icon {
+        display: none;
+    }
+}
