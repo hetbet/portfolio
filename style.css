@@ -51,17 +51,15 @@ a.icon {
     display: inline-block;
 }
 
-/* Smaller screens */
+/* Small Screens */
 @media screen and (max-width: 1000px) {
     /* Hide nav bar, add burger menu */
     nav {
         display: none;
     }
-
-
 }
 
-/* Wide Screen */
+/* Wide Screens */
 @media screen and (min-width: 1000px) {
     nav {
         display: flex;
