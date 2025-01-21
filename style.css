@@ -29,21 +29,30 @@ section {
     width: 100vw;
 }
 
+/* Anchor has h3 - change color, remove text decoration */
 a:has(h3) {
     transition-duration: 2s;
     color: var(--fnt-colour);
     text-decoration: none;
 }
 
+/* Nav > a > h3 - Add padding to left */
+nav > a > h3 {
+    padding-left: 10px;
+}
+
+/* Nav Hover - Change colour of other anchor elements */
 nav:hover a {
     transition-duration: 1s;
     color: rgb(133, 133, 133);
 }
+/* Nav Anchor Hover - Don't change font colour, add underline */
 nav a:hover {
     color: var(--fnt-colour);
-    font-size: 1.05em;
+    text-decoration: underline;
 }
 
+/* Anchor.icon - Color, size, padding, display */
 a.icon {
     color: white;
     font-size: 2em;
