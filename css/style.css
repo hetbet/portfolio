@@ -36,6 +36,18 @@ a:has(h3) {
     text-decoration: none;
 }
 
+/* Header - Flex, space-between */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+}
+
+/* Title - Font */
+#title {
+    font: var(--header-font);
+}
+
 /* Nav > a > h3 - Add padding to left */
 nav > a > h3 {
     padding-left: 10px;
@@ -66,16 +78,48 @@ a.icon {
     nav {
         display: none;
     }
+    /* Title - Absolute, left, 100% width, align center, 2em */
+    #title {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        font-size: 2em;
+    }
+
+    /* Burger Menu - Z-index up (above absolute title) */
+    a.icon {
+        z-index: 1000;
+    }
+
+    /* Top Header - Flex */
+    #topheader {
+        display: flex;
+    }
+
+    /* Header - Column flex direction */
+    header {
+        flex-direction: column;
+    }
 }
 
 /* Wide Screens */
 @media screen and (min-width: 1000px) {
+    /* Nav - flex, space-evenly, align center, gap */
     nav {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        gap: 3em;
     }
 
+    /* Title - Font-size */
+    #title {
+        font-size: 3em;
+    }
+
+    /* Burger Menu - Hidden */
     a.icon {
         display: none;
     }
