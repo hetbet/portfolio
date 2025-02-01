@@ -18,6 +18,12 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Footer (Credits) */
+footer > a {
+    color: var(--fnt-colour);
+    padding-left: 10px;
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -40,12 +46,27 @@ a:has(h3) {
 header {
     display: flex;
     justify-content: space-between;
-    margin: 0 10px 0 10px;
 }
 
 /* Title - Font */
 #title {
     font: var(--header-font);
+
+    display: flex;
+    align-items: center;
+}
+
+/* Before Title - Icon */
+#title::before {
+    content: ' ';
+    background-image: url(/assets/code.png);
+    height: 1em;
+    width: 1em;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;  
+    padding-right: 10px;
 }
 
 /* Nav > a > h3 - Add padding to left */
@@ -72,20 +93,45 @@ a.icon {
     display: inline-block;
 }
 
+/* Section Title - Font size, Flex, Center */
+.sectionTitle {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+/* Footer Title - Font size */
+#footerTitle {
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
 /* Small Screens */
 @media screen and (max-width: 1000px) {
-    /* Hide nav bar, add burger menu */
+    /* Nav - Hide, add burger menu, font-size bigger */
     nav {
         display: none;
+        font-size: 1.5em;
+        position: absolute;
+        top: 63px;
+        background: var(--bg-colour);
+        width: 100%;
     }
-    /* Title - Absolute, left, 100% width, align center, 2em */
+    /* Title - Center horizontally, Absolute, left, 100% width, 2em */
     #title {
+        justify-content: center;
+        width: 100%;
+        font-size: 2em;
+
         position: absolute;
         left: 0;
-        width: 100%;
-        text-align: center;
-        align-self: center;
-        font-size: 2em;
+        height: 63px;
+    }
+
+    /* Before Title - Height */
+    #title:before {
+        height: 30px;
     }
 
     /* Burger Menu - Z-index up (above absolute title) */
@@ -123,4 +169,10 @@ a.icon {
     a.icon {
         display: none;
     }
+
+    /* Header - Add spacing */
+    header {
+        margin: 0 10px 0 10px;
+    }
+
 }
