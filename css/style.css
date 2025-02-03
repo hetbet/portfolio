@@ -30,9 +30,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font);
 }
 
-/* Sections */
+/* Section -padding */
 section {
-    width: 100vw;
+    padding: 0 10px 0 10px;
 }
 
 /* Anchor has h3 - change color, remove text decoration */
@@ -107,6 +107,28 @@ a.icon {
     text-decoration: none;
 }
 
+/* Flex - Flex, Row, Bottom Padding */
+.flex {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+/* Text - Column, Space-evenly */
+.text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+/* Name + Job - No Decoration, margin top */
+#nameJob {
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+
 /* Small Screens */
 @media screen and (max-width: 1000px) {
     /* Nav - Hide, add burger menu, font-size bigger */
@@ -147,6 +169,21 @@ a.icon {
     /* Header - Column flex direction */
     header {
         flex-direction: column;
+    }
+
+    /* Flex - Column */
+    .flex {
+        flex-direction: column;
+    }
+
+    /* Name Job - Margin -  */
+    #nameJob {
+        margin: -10px;
+    }
+
+    /* Top Name Job - Margin-top */
+    #nameJob:first-child {
+        margin-top: 10px;
     }
 }
 
