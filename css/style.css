@@ -9,13 +9,17 @@
     --normal-font: Noto Sans;
 }
 
+/* Html - Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Body */
 body {
     margin: 0;
     font-family: var(--normal-font);
     background: var(--bg-colour);
     color: var(--fnt-colour);
-    scroll-behavior: smooth;
 }
 
 /* Footer (Credits) */
@@ -30,9 +34,26 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font);
 }
 
-/* Section -padding */
+/* h3 BESIDES nav links */
+h3:not(nav>a>h3) {
+    font-size: 2em;
+    padding: 1em 0;
+}
+
+/* p */
+p {
+    color: #d1d1d1;
+}
+
+/* Section - padding */
 section {
     padding: 0 10px 0 10px;
+}
+
+/* Unordered List - remove margin, more line height */
+ul {
+    margin: 0;
+    line-height: 2;
 }
 
 /* Anchor has h3 - change color, remove text decoration */
@@ -110,8 +131,31 @@ a.icon {
 /* Flex - Flex, Row, Bottom Padding */
 .flex {
     display: flex;
-    gap: 20px;
+    gap: 75px;
     padding-bottom: 10px;
+}
+
+/* Flex div ONLY IF IT HAS name job */
+.flex:has(#nameJob) {
+    gap: 20px;
+}
+
+/* Reverse */
+.reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+/* Center */
+.center {
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+
+/* Tools images */
+.tools > div > img {
+    height: 5em;
 }
 
 /* Text - Column, Space-evenly */
@@ -125,9 +169,25 @@ a.icon {
 /* Name + Job - No Decoration, margin top */
 #nameJob {
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
+/* Fa-brands - Icon height */
+.fa-brands {
+    font-size: 5em;
+}
+
+/* SQL Icon - Added own icon, due to fontawesome not including one :( */
+.fa-sql {
+    content: url(/assets/sql.png);
+    filter: invert();
+    height: 1em;
+}
+
+/* Fa-brands BESIDES SQL - + Padding to match artificial SQL icon text*/
+.fa-brands:not(.fa-sql) {
+    padding: 2px 0;
+}
 
 /* Small Screens */
 @media screen and (max-width: 1000px) {
@@ -171,9 +231,19 @@ a.icon {
         flex-direction: column;
     }
 
-    /* Flex - Column */
-    .flex {
+    /* Wrap */
+    .wrap {
+        flex-wrap: wrap;
+    }
+
+    /* Column */
+    .column {
         flex-direction: column;
+    }
+
+    /* Flex Image - Max Width */
+    .flex > img {
+        max-width: 100%;
     }
 
     /* Name Job - Margin -  */
@@ -184,6 +254,11 @@ a.icon {
     /* Top Name Job - Margin-top */
     #nameJob:first-child {
         margin-top: 10px;
+    }
+
+    /* p - Larger line height */
+    p {
+        line-height: 1.6em;
     }
 }
 
@@ -212,4 +287,13 @@ a.icon {
         margin: 0 10px 0 10px;
     }
 
+    /* Name Job - Bigger Font */
+    #nameJob {
+        font-size: 2.5em;
+    }
+
+    /* Flex Img - Width */
+    .flex > img {
+        max-width: 20%;
+    }
 }
