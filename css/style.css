@@ -90,11 +90,6 @@ header {
     padding-right: 10px;
 }
 
-/* Nav > a > h3 - Add padding to left */
-nav > a > h3 {
-    padding-left: 10px;
-}
-
 /* Nav Hover - Change colour of other anchor elements */
 nav:hover a {
     transition-duration: 1s;
@@ -225,6 +220,12 @@ div>div:hover>.fa-brands{
         background: var(--bg-colour);
         width: 100%;
     }
+
+    /* Nav > a > h3 - Add padding to left */
+    nav > a > h3 {
+        padding-left: 10px;
+    }
+
     /* Title - Center horizontally, Absolute, left, 100% width, 2em */
     #title {
         justify-content: center;
