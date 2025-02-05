@@ -14,7 +14,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Body */
+/* Body - Reset margin, set defaults */
 body {
     margin: 0;
     font-family: var(--normal-font);
@@ -153,7 +153,18 @@ a.icon {
     gap: 50px;
 }
 
-/* Tools images */
+/* Text Center */
+.textCenter {
+    text-align: center;
+}
+
+/* Tools - text, gap */
+.tools {
+    text-align: center;
+    gap: 50px;
+}
+
+/* Tools images - Height */
 .tools > div > img {
     height: 5em;
 }
@@ -165,6 +176,15 @@ a.icon {
     justify-content: space-evenly;
 }
 
+/* Justify Center */
+.justifyCenter {
+    justify-content: center;
+}
+
+/* Space Evenly */
+.justifySpaceEvenly {
+    justify-content: space-evenly;
+}
 
 /* Name + Job - No Decoration, margin top */
 #nameJob {
@@ -175,6 +195,11 @@ a.icon {
 /* Fa-brands - Icon height */
 .fa-brands {
     font-size: 5em;
+}
+
+/* Language Icons - Animation on Hover */
+div>div:hover>.fa-brands{
+    animation: bounce 0.5s ease-in infinite;
 }
 
 /* SQL Icon - Added own icon, due to fontawesome not including one :( */
@@ -260,6 +285,11 @@ a.icon {
     p {
         line-height: 1.6em;
     }
+
+    /* Languages + Tools Icons - Max Width Mobile */
+    #skills>div>div:not(.text-column){
+        max-width: 20%;
+    }
 }
 
 /* Wide Screens */
@@ -296,4 +326,10 @@ a.icon {
     .flex > img {
         max-width: 20%;
     }
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(2px);}
 }
