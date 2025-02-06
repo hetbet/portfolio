@@ -90,11 +90,6 @@ header {
     padding-right: 10px;
 }
 
-/* Nav > a > h3 - Add padding to left */
-nav > a > h3 {
-    padding-left: 10px;
-}
-
 /* Nav Hover - Change colour of other anchor elements */
 nav:hover a {
     transition-duration: 1s;
@@ -153,11 +148,6 @@ a.icon {
     gap: 50px;
 }
 
-/* Text Center */
-.textCenter {
-    text-align: center;
-}
-
 /* Tools - text, gap */
 .tools {
     text-align: center;
@@ -179,6 +169,11 @@ a.icon {
 /* Justify Center */
 .justifyCenter {
     justify-content: center;
+}
+
+/* Text Centered */
+.textCenter {
+    text-align: center;
 }
 
 /* Space Evenly */
@@ -289,6 +284,16 @@ div>div:hover>.fa-brands{
     /* Languages + Tools Icons - Max Width Mobile */
     #skills>div>div:not(.text-column){
         max-width: 20%;
+    }
+
+    /* Nav > a > h3 - Add padding to left - Credits to Wilson for noticing improper place */
+    nav > a > h3 {
+        padding-left: 10px;
+    }
+
+    /* Text Center ONLY MOBILE */
+    .textCenterMobile {
+        text-align: center;
     }
 }
 
